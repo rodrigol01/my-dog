@@ -1,0 +1,285 @@
+@import url(common.css);
+@import url(var.css);
+
+:root{
+    --color-primary: #FF9118;
+    --color-secondary: #313131;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    border: 1px solid red;
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+    color: var(--color-secondary);
+
+    position: relative;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container .slogan{
+    display: flex;
+    padding-top: 40px;
+}
+
+.container .slogan h1{
+    font-size: 2.4em;
+    padding-right: 20px;
+}
+
+.container .login {
+    display: flex;
+    flex-direction: column;
+}
+
+.container .login .inputLogin{
+    display: flex;
+    flex-direction: column;
+    padding: 30px 0;
+}
+
+.container .login .inputLogin .boxInput1{
+    position:relative;
+    border: none;
+    outline:none;
+    border-bottom: 1px solid #C5C5C5;
+    padding: 15px 0 15px 25px;
+    letter-spacing: 3px;
+    background: url('../imgs/pata3.svg') no-repeat center left;
+    background-size: 28px;
+}
+
+.container .login .inputLogin .boxInput1.error{
+    position:relative;
+    border: none;
+    outline:none;
+    border-bottom: 1px solid rgb(228, 52, 52);
+    color: rgb(228, 52, 52);
+    padding: 15px 0 15px 25px;
+    letter-spacing: 3px;
+    background: url('../imgs/pata3.svg') no-repeat center left;
+    background-size: 28px;
+}
+
+.container .login .inputLogin .boxInput2{
+    position:relative;
+    border: none;
+    outline:none;
+    border-bottom: 1px solid #C5C5C5;
+    padding: 15px 0 15px 25px;
+    letter-spacing: 3px;
+    background: url('../imgs/lock.svg') no-repeat center left;
+    background-size: 18px;
+}
+
+.container .login .inputLogin .boxInput2.error{
+    position:relative;
+    border: none;
+    outline:none;
+    border-bottom: 1px solid rgb(228, 52, 52);
+    color: rgb(228, 52, 52);
+    padding: 15px 0 15px 25px;
+    letter-spacing: 3px;
+    background: url('../imgs/lock.svg') no-repeat center left;
+    background-size: 18px;
+}
+
+.container .login .button{
+    margin: 0 auto;
+}
+
+.container .login .button button{
+    padding: 10px;
+    width: 200px;
+    margin: 10px 0 20px 0;
+    border-radius: 50px;
+    border: none;
+    background-color: var(--color-primary);
+    color:#FFF;
+    font-weight: bold;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+.container .login .sign-up{
+    font-size: 0.7em;
+    margin: 0 auto;
+}
+
+.container .login .sign-up a{
+    text-decoration: none;
+    color: var(--color-primary);
+}
+
+.container .fig{
+    position: relative;
+}
+
+.container .fig .fig1{
+    position: absolute;
+    left: 120px;
+    bottom: 10px;
+}
+
+.container .fig .fig2{
+    position: absolute;
+    right: 120px;
+    bottom: 90px;
+}
+
+.container .footer .imgDog{
+    position: absolute;
+    bottom:0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 250px;
+    z-index: 1
+}
+.container .footer .imgFooter{
+    position: absolute;
+    bottom:0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    z-index: 0;
+    width: 100%;
+    max-width: 1000px;
+    max-height: 100px;
+}
+@media(max-width: 560px) , (max-height: 291px){
+    body{
+        overflow:scroll;
+    }
+}
+
+@media(max-width: 749px) , (max-height: 670px){
+    .container .login {
+        position: relative;
+    }
+    
+    .container .fig .fig1{
+        position: absolute;
+        left: 100px;
+        bottom: 10px;
+    }
+
+    .container .fig .fig2{
+        position: absolute;
+        right: 100px;
+        bottom: 90px;
+    }
+
+    .container .footer .imgDog{
+        position: fixed;
+        bottom:0;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        width: 150px;
+    }
+
+    .container .footer .imgFooter{
+        position: fixed;
+        bottom:0;
+        left: 0;
+        right: 0;
+        height: 60px;
+    }
+}
+
+ @media(min-width:768px) and (min-height:950px){
+
+    .container .slogan h1{
+        font-size: 4em;
+        padding-right: 20px;
+    }
+
+    .container .slogan img{
+        width: 60px;
+    }
+
+    .container .login {
+        width: 500px;
+    }
+
+    .container .login .inputLogin{
+        padding: 40px 0;
+    }
+    
+    .container .login .inputLogin .boxInput1{
+        padding: 20px 0 20px 30px;
+        letter-spacing: 4px;
+        background-size: 32px;
+        font-size: 0.8em;
+    }
+    
+    .container .login .inputLogin .boxInput2{
+        padding: 20px 0 20px 25px;
+        letter-spacing: 4px;
+        background-size: 23px;
+        font-size: 0.8em;
+    }
+    
+    
+    .container .login .button button{
+        width: 430px;
+        height: 60px;
+        border-radius: 50px;
+        font-weight: bold;
+        font-size: 2em;
+    }
+
+    .container .login .sign-up{
+        font-size: 1em;
+        margin: 0 auto;
+    }
+
+    .container .fig .fig1{
+        width: 60px;
+        left: 200px;
+        bottom: 10px;
+    }
+
+    .container .fig .fig2{
+        width: 60px;
+        right: 150px;
+        bottom: 140px;
+    }
+
+    .container .footer .imgDog{
+        position: fixed;
+        bottom:0;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        width: 400px;
+    }
+
+    .container .footer .imgFooter{
+        position: fixed;
+        bottom:0;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        z-index: 0;
+        width: 100%;
+        max-width: 1300px;
+        max-height: 100px;
+    }
+
+}
